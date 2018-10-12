@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <form action="{% url 'button' %}" method="post">
+            {% csrf_token %}
+            <input type="submit" value="execute">
+        </form>
+        <form action="{% url 'button' %}" method="post" id="form1">
+            {% csrf_token %}
+            First name: <input type="text" name="fname"><br>
+            Last name: <input type="text" name="lname"><br>
+          </form>
+          
+          <button type="submit" form="form1" value="Submit">Submit</button> 
+        {% if val %}
+            <div>
+                <!--<h1>{{val}}</h1>  -->
+            </div>
+        {%endif%}
+    </body>
+</html>
